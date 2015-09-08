@@ -1,19 +1,23 @@
 div(ng-controller="MainCtrl as mainCtrl")
 
-  div 
+  p(class="input-group") 
     form(name="searchForm", ng-submit="mainCtrl.browsePlaces()")
       input(type="text", placeholder="Enter Location", ng-model="mainCtrl.filterVenue", required)
-      input(type="submit", value="Search",  ng-disabled="searchForm.$invalid")
+      input(type="submit", value="Search", class="btn btn-default",  ng-disabled="searchForm.$invalid")
       
   div(ng-repeat="place in mainCtrl.places")
-    div(ng-repeat="venue in place.venues")
-      p
-        label Venue Name:
-        span 
-          a(target="_blank", href="{{venue.url}}")
-            {{venue.name}}
-      p
-        label Adress:
-        span {{venue.location.address}}
+    div(ng-repeat="venue in place.venues", class="list-group")
+      div(class="list-group-item")
+        p
+          label Venue Name : 
+          span 
+            a(target="_blank", href="{{venue.url}}")
+              {{venue.name}}
+        p
+          label Adress : 
+          span {{venue.location.address}}
+        p
+          label Here Now : 
+          span {{venue.hereNow.summary}}
       
     
