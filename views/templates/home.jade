@@ -1,2 +1,15 @@
 div(ng-controller="MainCtrl as mainCtrl")
-  {{mainCtrl.helloWorld}}  
+  {{mainCtrl.helloWorld}} 
+
+  div(ng-repeat="place in mainCtrl.places")
+    div(ng-repeat="venue in place.venues")
+      p
+        label Venue Name:
+        span 
+          a(target="_blank", href="{{venue.url}}")
+            {{venue.name}}
+      p
+        label Adress:
+        span {{venue.location.address}}
+      
+    
