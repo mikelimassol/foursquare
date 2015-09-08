@@ -1,4 +1,3 @@
-// File: chapter10/routing-example/app/scripts/services.js
 angular
 		.module('FourSquareApp')
 		.factory(
