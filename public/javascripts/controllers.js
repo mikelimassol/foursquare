@@ -5,11 +5,11 @@ angular.module('FourSquareApp')
 	
 	var self = this;
 
-	self.helloWorld = "hello world";
+	self.filterVenue = "";
 	
-	self.getConnectedUsers = function() {
+	self.browsePlaces = function() {
 		PlacesService
-				.browsePlaces()
+				.browsePlaces(self.filterVenue)
 				.then(
 						function(result) {
 							if (result.data == 0) {
@@ -22,6 +22,6 @@ angular.module('FourSquareApp')
 						})
 	}
 	
-	self.getConnectedUsers();
+	self.browsePlaces();
 
 } ]);

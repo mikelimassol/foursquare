@@ -1,6 +1,10 @@
 div(ng-controller="MainCtrl as mainCtrl")
-  {{mainCtrl.helloWorld}} 
 
+  div 
+    form(name="searchForm", ng-submit="mainCtrl.browsePlaces()")
+      input(type="text", placeholder="Enter Location", ng-model="mainCtrl.filterVenue", required)
+      input(type="submit", value="Search",  ng-disabled="searchForm.$invalid")
+      
   div(ng-repeat="place in mainCtrl.places")
     div(ng-repeat="venue in place.venues")
       p
