@@ -1,4 +1,4 @@
-$billingApp = angular.module('FourSquareApp', [ 'ngRoute', 'ui.bootstrap' ])
+$billingApp = angular.module('FourSquareApp', [ 'ngRoute', 'ui.bootstrap', 'ngMap' ])
 		.config(function($routeProvider) {
 
 			$routeProvider.when('/home', {
