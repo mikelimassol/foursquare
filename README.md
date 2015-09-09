@@ -9,14 +9,14 @@ Because this is the first time I developed in node.js and express.js, I used onl
 
 
 References
-1) http://stackoverflow.com/questions/29829925/ng-view-not-rendering-jade-templates
-2) http://jade-lang.com/
-3) http://shapeshed.com/creating-a-basic-site-with-node-and-express/
-4) http://getbootstrap.com/css/
+1) http://stackoverflow.com/questions/29829925/ng-view-not-rendering-jade-templates 
+2) http://jade-lang.com/ 
+3) http://shapeshed.com/creating-a-basic-site-with-node-and-express/ 
+4) http://getbootstrap.com/css/ 
 
 
 
 #How to run the project
-1) with console navigate to the application root#
+1) with the console navigate to the application root folder
 2) run "npm start"
 3) Open a browser and go to "http://127.0.0.1:3000/"
